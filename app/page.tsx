@@ -6,6 +6,7 @@ import { GrainOverlay } from "@/components/grain-overlay"
 import { WorkSection } from "@/components/sections/work-section"
 import { ServicesSection } from "@/components/sections/services-section"
 import { AboutSection } from "@/components/sections/about-section"
+import { UseCasesSection } from "@/components/sections/use-cases-section"
 import { ContactSection } from "@/components/sections/contact-section"
 import { MagneticButton } from "@/components/magnetic-button"
 import { useRef, useEffect, useState } from "react"
@@ -218,16 +219,13 @@ export default function Home() {
       >
         <button
           onClick={() => scrollToSection(0)}
-          className="flex items-center gap-2 transition-transform hover:scale-105"
+          className="transition-transform hover:scale-105"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-foreground/15 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-foreground/25">
-            <span className="font-sans text-xl font-bold text-foreground">P</span>
-          </div>
           <span className="font-sans text-xl font-semibold tracking-tight text-foreground">Panaptico</span>
         </button>
 
         <div className="hidden items-center gap-8 md:flex">
-          {["Home", "Discover", "Services", "About", "Contact"].map((item, index) => (
+          {["Home", "Products", "Use Cases", "About", "Contact"].map((item, index) => (
             <button
               key={item}
               onClick={() => scrollToSection(index)}
@@ -262,7 +260,7 @@ export default function Home() {
         <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
           <div className="max-w-3xl">
             <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700">
-              <p className="font-mono text-xs text-foreground/90">WebGL Powered Design</p>
+              <p className="font-mono text-xs text-foreground/90">Multi-Cloud Intelligence Platform</p>
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
               <span className="text-balance">
@@ -299,7 +297,7 @@ export default function Home() {
         </section>
 
         <WorkSection />
-        <ServicesSection />
+        <UseCasesSection />
         <AboutSection scrollToSection={scrollToSection} />
         <ContactSection />
       </div>

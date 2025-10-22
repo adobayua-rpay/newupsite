@@ -28,20 +28,44 @@ export function WorkSection() {
           {[
             {
               number: "01",
-              title: "Universal Component Discovery",
-              category: "A real-time, queryable map of your entire cloud.",
+              title: "Component Discovery & Mapping",
+              category: "Real-time graph of every AWS/Azure/GCP component with complete dependency relationships.",
               direction: "left",
             },
             {
               number: "02",
-              title: "Graph-Aware Protection",
-              category: "Restore entire application architectures, not just files.",
+              title: "Component Backup & Recovery",
+              category: "Atomic snapshots of entire microservice graphs with intelligent cross-account restore.",
               direction: "right",
             },
             {
               number: "03",
-              title: "Bidirectional GitOps",
-              category: "Automatically reconcile drift between code and reality.",
+              title: "Conversational Cloud Ops",
+              category: "Natural language to validated infrastructure actions with blast radius analysis.",
+              direction: "left",
+            },
+            {
+              number: "04",
+              title: "Intelligent Deployment",
+              category: "Progressive delivery with auto-rollback and dependency-aware orchestration.",
+              direction: "right",
+            },
+            {
+              number: "05",
+              title: "Security & Automation",
+              category: "Cross-signal intelligence with automated remediation and compliance-grade audit.",
+              direction: "left",
+            },
+            {
+              number: "06",
+              title: "Cost Intelligence",
+              category: "Component-level cost attribution with automated optimization and budget guardrails.",
+              direction: "right",
+            },
+            {
+              number: "07",
+              title: "Component GitOps",
+              category: "Bidirectional sync between Git and runtime with multi-IaC support and preview environments.",
               direction: "left",
             },
           ].map((project, i) => (
