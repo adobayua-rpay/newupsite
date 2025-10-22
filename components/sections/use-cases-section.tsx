@@ -99,9 +99,9 @@ export function UseCasesSection() {
   return (
     <section
       ref={ref}
-      className="flex h-screen w-screen shrink-0 snap-start items-center px-6 py-24 md:px-12 lg:px-16"
+      className="flex h-screen w-screen shrink-0 snap-start overflow-y-auto px-6 py-24 md:px-12 lg:px-16"
     >
-      <div className="mx-auto w-full max-w-7xl">
+      <div className="mx-auto my-auto w-full max-w-7xl">
         <div
           className={`mb-8 transition-all duration-700 md:mb-12 ${
             isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
