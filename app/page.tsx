@@ -106,6 +106,19 @@ export default function Home() {
 
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
+      // Check if we're scrolling inside a scrollable section
+      const target = e.target as HTMLElement
+      const scrollableSection = target.closest("section.overflow-y-auto")
+
+      if (scrollableSection) {
+        // Allow natural vertical scrolling in scrollable sections
+        const hasVerticalScroll = scrollableSection.scrollHeight > scrollableSection.clientHeight
+        if (hasVerticalScroll) {
+          // Don't prevent default - let the section scroll naturally
+          return
+        }
+      }
+
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         e.preventDefault()
 
