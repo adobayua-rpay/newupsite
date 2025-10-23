@@ -30,7 +30,7 @@ export function WorkSection() {
             {
               number: "01",
               title: "Component Discovery & Mapping",
-              category: "Real-time graph of every AWS/Azure/GCP component with complete dependency relationships.",
+              category: "Real-time graph of every AWS/Azure/GCP component with AI powered intelligent insights.",
               direction: "left",
             },
             {
@@ -42,7 +42,7 @@ export function WorkSection() {
             {
               number: "03",
               title: "Conversational Cloud Ops",
-              category: "Natural language to validated infrastructure actions with blast radius analysis.",
+              category: "Natural language to validated infrastructure questions and actions.",
               direction: "left",
             },
             {
@@ -53,8 +53,8 @@ export function WorkSection() {
             },
             {
               number: "05",
-              title: "Security & Automation",
-              category: "Cross-signal intelligence with automated remediation and compliance-grade audit.",
+              title: "Alerting & Automation",
+              category: "Create custom alerts and automated workflows for any component event or metric.",
               direction: "left",
             },
             {

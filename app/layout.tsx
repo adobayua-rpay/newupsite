@@ -8,7 +8,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Panaptico - The Operating System for Cloud Components",
+  title: "Panaptico - The Engine for Cloud Components",
   description: "The real-time intelligence layer for your entire cloud infrastructure—one normalized graph, one API, one interface across AWS, Azure, and GCP",
 }
 
