@@ -18,10 +18,10 @@ export function WorkSection() {
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            What You Get
+            What You Build
           </h2>
           <p className="font-mono text-sm text-foreground/60 md:text-base">
-            / Everything needed to build and run infrastructure applications.
+            / 50+ infrastructure systems. One platform.
           </p>
         </div>
 
@@ -29,39 +29,45 @@ export function WorkSection() {
           {[
             {
               number: "01",
-              title: "50+ Infrastructure Integrations",
-              category: "Native connectors for AWS, Databricks, Kafka, Elastic, Okta, PostgreSQL, Kubernetes, and more.",
+              title: "Just-in-Time Access Portals",
+              category: "Okta, AWS IAM, Azure Entra—give teams short-lived access without 4-week IAM ticket backlogs.",
               direction: "left",
             },
             {
               number: "02",
-              title: "Enterprise Auth Built-in",
-              category: "SSO, per-app IAM, role-based access, and audit trails. No configuration required.",
+              title: "Provisioning Interfaces",
+              category: "Databricks workspaces, Postgres databases, Kafka topics—let engineers provision in minutes instead of filing tickets.",
               direction: "right",
             },
             {
               number: "03",
-              title: "Managed Hosting",
-              category: "Deploy production-ready apps with logging, monitoring, and observability included.",
+              title: "Cost Allocation & FinOps",
+              category: "Real-time cost attribution by team, project, or department with automated guardrails and anomaly detection.",
               direction: "left",
             },
             {
               number: "04",
-              title: "15-Minute Deployment",
-              category: "From description to deployed, production-ready application. Not hours. Not days.",
+              title: "Incident Dashboards",
+              category: "Kubernetes deployments, AWS Lambda failures, database issues—see the blast radius and remediate in minutes.",
               direction: "right",
             },
             {
               number: "05",
-              title: "Secure Credential Management",
-              category: "Proper secrets handling. No API keys in environment variables. No security shortcuts.",
+              title: "Compliance & Audit Systems",
+              category: "SOC2, CIS benchmarks, security groups, IAM drift—prove compliance in real-time with signed audit trails.",
               direction: "left",
             },
             {
               number: "06",
-              title: "Maintenance Included",
-              category: "APIs change. Systems evolve. We handle the updates so your tools keep working.",
+              title: "Observability Integrations",
+              category: "Datadog, Prometheus, CloudWatch—correlate logs, metrics, and traces across your entire infrastructure stack.",
               direction: "right",
+            },
+            {
+              number: "07",
+              title: "Resource Governance",
+              category: "Track who accesses what. Auto-revoke when people leave. Detect credential drift and privilege creep.",
+              direction: "left",
             },
           ].map((project, i) => (
             <ProjectCard key={i} project={project} index={i} isVisible={isVisible} />

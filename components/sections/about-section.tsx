@@ -21,11 +21,11 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               }`}
             >
               <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-                The infrastructure
+                For Every Dollar
                 <br />
-                is the easy part.
+                Spent On
                 <br />
-                <span className="text-foreground/40">Operating it isn't.</span>
+                <span className="text-foreground/40">Infrastructure.</span>
               </h2>
             </div>
 
@@ -36,13 +36,10 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                For every dollar you spend on infrastructure, you spend another making it usable. 
-                You buy Databricks—then you need tooling so more than 2 engineers can provision workspaces. 
-                You run Kubernetes—then you need deployment portals, resource viewers, incident dashboards.
+                You buy Databricks—then you need tooling so more than 2 engineers can provision workspaces. You self-host Postgres—then you need dashboards, access controls, backup monitoring. You run Kubernetes—then you need deployment portals, resource viewers, incident dashboards.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Panaptico handles the build, deploy, and maintenance of these internal systems. 
-                50+ integrations. Enterprise auth included. 15 minutes from description to production.
+                Infrastructure is the easy part. Operating it is where the money goes. Panaptico takes away the painstaking process of architecting, deploying, and managing the internal systems that are critical for day-to-day operations.
               </p>
             </div>
           </div>
@@ -50,9 +47,9 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           {/* Right side - Stats with creative layout */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
             {[
-              { value: "50+", label: "Infrastructure Integrations", sublabel: "AWS, Databricks, Kafka, Elastic, Okta, and more.", direction: "right" },
-              { value: "15min", label: "To Production", sublabel: "From description to deployed application.", direction: "left" },
-              { value: "$20", label: "Per Application", sublabel: "Not $10K+ in engineering time.", direction: "right" },
+              { value: "50+", label: "Infrastructure Systems", sublabel: "AWS, Azure, Databricks, Postgres, and more.", direction: "right" },
+              { value: "15min", label: "Time to Deploy", sublabel: "From description to production-ready.", direction: "left" },
+              { value: "$", label: "Per Tool", sublabel: "15 minutes setup. No multi-week security review.", direction: "right" },
             ].map((stat, i) => {
               const getRevealClass = () => {
                 if (!isVisible) {

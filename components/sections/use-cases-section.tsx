@@ -8,137 +8,85 @@ const useCases = [
     persona: "Security & Compliance",
     cases: [
       {
-        title: "IAM Governance Portal",
-        problem: "47 services, no unified view of who has access to what. Audit prep takes weeks.",
-        solution: "Build an IAM analyzer that spans all your services. Track permissions, detect risky access, generate compliance reports.",
-        impact: "Weeks of audit prep → minutes",
+        title: "The 2AM GuardDuty Alert",
+        problem: "Security alerts at 2AM, no context on what the IAM role does or what breaks if you revoke it.",
+        solution: "Instant graph view of role dependencies, blast radius analysis, and safe remediation—all in 4 minutes instead of 1+ hour.",
+        impact: "1 hour → 4 minutes incident response",
       },
       {
-        title: "JIT Access System",
-        problem: "Intern needs Databricks access for a 3-week project. It's a 4-week ticket to the IAM team.",
-        solution: "Deploy a just-in-time access portal with approval workflows, time-bound permissions, and automatic revocation.",
-        impact: "4-week wait → same-day access",
+        title: "The Public S3 Bucket Nightmare",
+        problem: "23 public S3 buckets found. Which ones should be public? Who owns them? What breaks if we fix it?",
+        solution: "Auto-classify buckets, show dependencies, make 17 private with policy updates—all in 8 minutes.",
+        impact: "3 weeks → 8 minutes compliance fix",
       },
       {
-        title: "Permission Audit Dashboard",
-        problem: "Security keeps asking for compliance reports. Manual exports, outdated spreadsheets, constant back-and-forth.",
-        solution: "Ship a real-time compliance dashboard with cryptographically signed evidence and continuous monitoring.",
-        impact: "Continuous compliance, not quarterly scrambles",
-      },
-    ],
-  },
-  {
-    persona: "Platform Engineering",
-    cases: [
-      {
-        title: "Developer Self-Service Portal",
-        problem: "Only 2 engineers know how to provision Databricks workspaces safely. Everyone else opens tickets.",
-        solution: "Build a self-service portal with guardrails. Developers provision what they need, policies enforce what's allowed.",
-        impact: "Tickets → self-service in minutes",
-      },
-      {
-        title: "Infrastructure Dashboard",
-        problem: "Teams can't see their own resources. Every question becomes a Slack thread to platform engineering.",
-        solution: "Deploy resource viewers for each team. Real-time status, costs, dependencies—all in one place.",
-        impact: "Visibility without the bottleneck",
-      },
-      {
-        title: "Service Catalog",
-        problem: "No standard way to request infrastructure. Different teams, different processes, inconsistent results.",
-        solution: "Create a service catalog with templates, approval flows, and automated provisioning.",
-        impact: "Standardized, repeatable, auditable",
+        title: "The SOC2 Audit From Hell",
+        problem: "40 hours per audit to manually prove encryption, logging, and MFA compliance with outdated Excel exports.",
+        solution: "Generate complete audit report with cryptographically signed evidence in 5 minutes.",
+        impact: "$10K saved per audit, continuous compliance",
       },
     ],
   },
   {
-    persona: "FinOps & Cost Management",
+    persona: "Platform Engineering & DevOps",
     cases: [
       {
-        title: "Cost Allocation Dashboard",
-        problem: "60% of resources untagged. Teams dispute allocations. Finance wants answers nobody has.",
-        solution: "Build cost allocation dashboards by team, project, or department. Auto-infer ownership from usage patterns.",
-        impact: "20 hours/month → 5 minutes",
+        title: "The Deployment That Took Down Prod",
+        problem: "Lambda memory change triggers obscure IAM policy condition, causing 15% error rate in production.",
+        solution: "Pre-deployment blast radius detects policy conflict, prevents incident before it happens.",
+        impact: "Zero downtime vs. 15 minutes of outage",
       },
       {
-        title: "License Optimizer",
-        problem: "Paying for 1,200 Databricks licenses. No idea how many are actually used.",
-        solution: "Deploy a license tracker that shows utilization, identifies waste, and recommends rightsizing.",
-        impact: "Find the $50K/year you're wasting",
+        title: "The Accidental Resource Deletion",
+        problem: "Junior engineer runs 'terraform destroy' in prod by mistake. 2.5 hours to restore, partial data loss.",
+        solution: "6-minute RTO with component-aware restore including all configs, relationships, and data.",
+        impact: "6 minutes vs. 2.5 hours, zero data loss",
       },
       {
-        title: "Budget Guardrails",
-        problem: "Cost spikes discovered at month-end. By then, the damage is done.",
-        solution: "Ship budget monitoring with alerts, automatic enforcement, and anomaly detection.",
-        impact: "Catch overruns before they happen",
+        title: "The Cascading Failure",
+        problem: "DynamoDB throttling cascades to 10 components. 45 minutes to trace dependencies and fix.",
+        solution: "Auto-correlate root cause, show full impact graph, remediate in 7 minutes—optionally while you sleep.",
+        impact: "7 minutes MTTR vs. 45 minutes",
       },
     ],
   },
   {
-    persona: "IT Operations",
+    persona: "FinOps & Cost Optimization",
     cases: [
       {
-        title: "User Provisioning Tool",
-        problem: "Onboarding takes a week. HR, IT, Security all have different checklists. Things get missed.",
-        solution: "Build automated onboarding that provisions accounts across all systems from a single workflow.",
-        impact: "Week-long onboarding → same day",
+        title: "The Mystery Cost Spike",
+        problem: "$35K cost spike. 4 hours to find someone changed a Lambda to 3008MB for 'testing' and forgot to revert.",
+        solution: "2-minute root cause with component-level cost attribution. Auto-revert and set up guardrails.",
+        impact: "$300K/year savings identified",
       },
       {
-        title: "Bulk Operations Interface",
-        problem: "Need to update 500 Okta users. It's either manual clicks or asking engineering for a script.",
-        solution: "Deploy a bulk operations tool with preview, validation, and rollback. Safe mass changes without code.",
-        impact: "Hours of clicking → 5-minute batch job",
+        title: "The Tech Debt Mountain",
+        problem: "1,200 Lambdas—no idea which are used. Paying $5K/month for zombie resources.",
+        solution: "Identify 437 unused components, safe to delete, with backups. 10-minute cleanup.",
+        impact: "$49K/year recovered",
       },
       {
-        title: "Directory Management Dashboard",
-        problem: "User data scattered across Okta, AD, and cloud IAM. No single source of truth.",
-        solution: "Create a unified directory view that syncs across identity providers and shows discrepancies.",
-        impact: "One view, all your identities",
+        title: "The Chargeback Nightmare",
+        problem: "20 hours/month to build cost allocation models. 60% of resources untagged, teams dispute allocations.",
+        solution: "Auto-infer ownership from graph, 98% accuracy. 5-minute monthly reports.",
+        impact: "20 hours → 5 minutes per month",
       },
     ],
   },
   {
-    persona: "DevOps & SRE",
+    persona: "Executive & Leadership",
     cases: [
       {
-        title: "Deployment Monitor",
-        problem: "Deployments fail and nobody knows why until users complain. Logs scattered across 10 tools.",
-        solution: "Build a deployment dashboard that tracks rollouts, correlates errors, and shows blast radius.",
-        impact: "Find failures before users do",
+        title: "The Board Question",
+        problem: "Board asks 'Are we SOC2 compliant?' CTO scrambles for 2 days to manually audit and find gaps.",
+        solution: "Real-time compliance dashboard shown live in board meeting with continuous monitoring proof.",
+        impact: "Board confidence, $120K audit savings",
       },
       {
-        title: "Incident Response Workflow",
-        problem: "Incident happens, then it's Slack chaos. Who's on call? What's affected? Where are the runbooks?",
-        solution: "Deploy an incident portal with on-call routing, automated diagnostics, and runbook execution.",
-        impact: "Structured response, faster resolution",
-      },
-      {
-        title: "Kafka Management Console",
-        problem: "Provisioning topics requires CLI access. Consumer group lag is checked manually. ACLs are a mystery.",
-        solution: "Ship a Kafka operations portal with topic management, lag monitoring, and ACL administration.",
-        impact: "Kafka operations without the CLI",
-      },
-    ],
-  },
-  {
-    persona: "Data Analytics",
-    cases: [
-      {
-        title: "Pipeline Monitor",
-        problem: "Data pipelines fail silently. Analysts discover issues when dashboards go stale.",
-        solution: "Build a pipeline monitoring dashboard with run status, data freshness, and failure alerts.",
-        impact: "Know when pipelines break, not when reports do",
-      },
-      {
-        title: "Data Quality Dashboard",
-        problem: "Bad data makes it to production. By the time it's caught, decisions were already made.",
-        solution: "Deploy data quality checks with anomaly detection, validation rules, and lineage tracking.",
-        impact: "Catch data issues at the source",
-      },
-      {
-        title: "Usage Tracker",
-        problem: "Which datasets are actually used? Which queries are expensive? No visibility into analytics workloads.",
-        solution: "Create a usage analytics dashboard for Snowflake, Databricks, or BigQuery with query patterns and cost attribution.",
-        impact: "Optimize what you can measure",
+        title: "The M&A Diligence Nightmare",
+        problem: "Buyer needs complete cloud inventory for due diligence. 3 weeks of engineering chaos, $200K+ cost.",
+        solution: "1-hour comprehensive report: inventory, costs, security, compliance, debt—buyer calls it 'most thorough ever.'",
+        impact: "3 weeks → 1 hour, faster deal close",
       },
     ],
   },
@@ -161,10 +109,10 @@ export function UseCasesSection() {
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            What You Can Build
+            Real Problems
           </h2>
           <p className="font-mono text-sm text-foreground/60 md:text-base">
-            / Internal applications for every team that operates infrastructure.
+            / The infrastructure operations that drain budgets and sanity.
           </p>
         </div>
 

@@ -17,33 +17,33 @@ export function ServicesSection() {
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Capabilities
+            Why It Works
           </h2>
           <p className="font-mono text-sm text-foreground/60 md:text-base">
-            / The foundation of our intelligence layer.
+            / Built for infrastructure, not web apps.
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
           {[
             {
-              title: "Component Graph Engine",
-              description: "The living map of every component, dependency, and relationship in real-time.",
+              title: "Native Infrastructure Knowledge",
+              description: "50+ integrations with deep understanding of each system's APIs, auth models, and failure modes. Not generic.",
               direction: "top",
             },
             {
-              title: "Multi-Cloud Normalization",
-              description: "One unified model for assets across AWS, Azure, and GCP.",
+              title: "Secure by Design",
+              description: "Enterprise auth, per-app IAM, encrypted credential storage, audit trails that actually work.",
               direction: "right",
             },
             {
-              title: "Zero-Trust Engine",
-              description: "Just-in-time permissions and an immutable audit trail for every action.",
+              title: "Production-Ready",
+              description: "Managed hosting with observability, monitoring, and ongoing maintenance as APIs evolve.",
               direction: "left",
             },
             {
-              title: "State Reconciliation",
-              description: "Continuously syncing Git, runtime, and the graph into a single source of truth.",
+              title: "Deploy in Minutes",
+              description: "15 minutes from description to live. No two weeks figuring out deployment, credential handling, or security review.",
               direction: "bottom",
             },
           ].map((service, i) => (
