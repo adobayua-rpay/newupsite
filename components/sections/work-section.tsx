@@ -18,10 +18,10 @@ export function WorkSection() {
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Platform Features
+            What You Get
           </h2>
           <p className="font-mono text-sm text-foreground/60 md:text-base">
-            / A suite of applications on one component graph.
+            / Everything needed to build and run infrastructure applications.
           </p>
         </div>
 
@@ -29,45 +29,39 @@ export function WorkSection() {
           {[
             {
               number: "01",
-              title: "Component Discovery & Mapping",
-              category: "Real-time graph of every AWS/Azure/GCP component with AI powered intelligent insights.",
+              title: "50+ Infrastructure Integrations",
+              category: "Native connectors for AWS, Databricks, Kafka, Elastic, Okta, PostgreSQL, Kubernetes, and more.",
               direction: "left",
             },
             {
               number: "02",
-              title: "Component Backup & Recovery",
-              category: "Atomic snapshots of entire microservice graphs with intelligent cross-account restore.",
+              title: "Enterprise Auth Built-in",
+              category: "SSO, per-app IAM, role-based access, and audit trails. No configuration required.",
               direction: "right",
             },
             {
               number: "03",
-              title: "Conversational Cloud Ops",
-              category: "Natural language to validated infrastructure questions and actions.",
+              title: "Managed Hosting",
+              category: "Deploy production-ready apps with logging, monitoring, and observability included.",
               direction: "left",
             },
             {
               number: "04",
-              title: "Intelligent Deployment",
-              category: "Progressive delivery with auto-rollback and dependency-aware orchestration.",
+              title: "15-Minute Deployment",
+              category: "From description to deployed, production-ready application. Not hours. Not days.",
               direction: "right",
             },
             {
               number: "05",
-              title: "Alerting & Automation",
-              category: "Create custom alerts and automated workflows for any component event or metric.",
+              title: "Secure Credential Management",
+              category: "Proper secrets handling. No API keys in environment variables. No security shortcuts.",
               direction: "left",
             },
             {
               number: "06",
-              title: "Cost Intelligence",
-              category: "Component-level cost attribution with automated optimization and budget guardrails.",
+              title: "Maintenance Included",
+              category: "APIs change. Systems evolve. We handle the updates so your tools keep working.",
               direction: "right",
-            },
-            {
-              number: "07",
-              title: "Component GitOps",
-              category: "Bidirectional sync between Git and runtime with multi-IaC support and preview environments.",
-              direction: "left",
             },
           ].map((project, i) => (
             <ProjectCard key={i} project={project} index={i} isVisible={isVisible} />

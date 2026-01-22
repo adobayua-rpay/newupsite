@@ -21,11 +21,11 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               }`}
             >
               <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-                Designed for
+                The infrastructure
                 <br />
-                the
+                is the easy part.
                 <br />
-                <span className="text-foreground/40">Component Era.</span>
+                <span className="text-foreground/40">Operating it isn't.</span>
               </h2>
             </div>
 
@@ -36,9 +36,13 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Modern applications are built from thousands of interconnected cloud components, but the tools to manage
-                them are fragmented and blind. Panaptico provides the missing operating system—a single, intelligent
-                control plane to bring clarity, safety, and automation to your entire cloud estate.
+                For every dollar you spend on infrastructure, you spend another making it usable. 
+                You buy Databricks—then you need tooling so more than 2 engineers can provision workspaces. 
+                You run Kubernetes—then you need deployment portals, resource viewers, incident dashboards.
+              </p>
+              <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
+                Panaptico handles the build, deploy, and maintenance of these internal systems. 
+                50+ integrations. Enterprise auth included. 15 minutes from description to production.
               </p>
             </div>
           </div>
@@ -46,9 +50,9 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           {/* Right side - Stats with creative layout */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
             {[
-              { value: "500K+", label: "Components Synced", sublabel: "Across our customers.", direction: "right" },
-              { value: "<60s", label: "Data Freshness", sublabel: "Real-time graph accuracy.", direction: "left" },
-              { value: "3", label: "Clouds Unified", sublabel: "AWS, Azure, and GCP.", direction: "right" },
+              { value: "50+", label: "Infrastructure Integrations", sublabel: "AWS, Databricks, Kafka, Elastic, Okta, and more.", direction: "right" },
+              { value: "15min", label: "To Production", sublabel: "From description to deployed application.", direction: "left" },
+              { value: "$20", label: "Per Application", sublabel: "Not $10K+ in engineering time.", direction: "right" },
             ].map((stat, i) => {
               const getRevealClass = () => {
                 if (!isVisible) {

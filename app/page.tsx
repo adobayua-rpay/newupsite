@@ -273,19 +273,19 @@ export default function Home() {
         <section className="flex min-h-screen w-screen shrink-0 flex-col justify-end px-6 pb-16 pt-24 md:px-12 md:pb-24">
           <div className="max-w-3xl">
             <div className="mb-4 inline-block animate-in fade-in slide-in-from-bottom-4 rounded-full border border-foreground/20 bg-foreground/15 px-4 py-1.5 backdrop-blur-md duration-700">
-              <p className="font-mono text-xs text-foreground/90">Multi-Cloud Intelligence Platform</p>
+              <p className="font-mono text-xs text-foreground/90">Platform for Building IT & Infrastructure Applications</p>
             </div>
             <h1 className="mb-6 animate-in fade-in slide-in-from-bottom-8 font-sans text-6xl font-light leading-[1.1] tracking-tight text-foreground duration-1000 md:text-7xl lg:text-8xl">
               <span className="text-balance">
-                Operating System
+                Internal Tools for
                 <br />
-                For Cloud Components
+                Infrastructure
               </span>
             </h1>
             <p className="mb-8 max-w-xl animate-in fade-in slide-in-from-bottom-4 text-lg leading-relaxed text-foreground/90 duration-1000 delay-200 md:text-xl">
               <span className="text-pretty">
-                Discover, protect, deploy, and automate every AWS, Azure, and GCP component through one real-time graph,
-                and one control plane.
+                Build, deploy, and host internal applications for AWS, Databricks, Kafka, Elastic, Okta, and 50+ systems. 
+                Enterprise auth, managed hosting, and observability included.
               </span>
             </p>
             <div className="flex animate-in fade-in slide-in-from-bottom-4 flex-col gap-4 duration-1000 delay-300 sm:flex-row sm:items-center">
