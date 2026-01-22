@@ -13,15 +13,14 @@ export function WorkSection() {
     >
       <div className="mx-auto w-full max-w-7xl">
         <div
-          className={`mb-12 transition-all duration-700 md:mb-16 ${
-            isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
-          }`}
+          className={`mb-12 transition-all duration-700 md:mb-16 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
+            }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            What You Build
+            What You Can Build
           </h2>
           <p className="font-mono text-sm text-foreground/60 md:text-base">
-            / 50+ infrastructure systems. One platform.
+            / Internal tools for every infrastructure system you run.
           </p>
         </div>
 
@@ -29,45 +28,39 @@ export function WorkSection() {
           {[
             {
               number: "01",
-              title: "Just-in-Time Access Portals",
-              category: "Okta, AWS IAM, Azure Entra—give teams short-lived access without 4-week IAM ticket backlogs.",
+              title: "Access Management Portals",
+              category: "JIT access requests, bulk user provisioning, permission audits across Okta, AWS IAM, Azure AD, and more.",
               direction: "left",
             },
             {
               number: "02",
-              title: "Provisioning Interfaces",
-              category: "Databricks workspaces, Postgres databases, Kafka topics—let engineers provision in minutes instead of filing tickets.",
+              title: "Infrastructure Dashboards",
+              category: "Resource viewers, cost monitors, health checks for Postgres, Elasticsearch, Redis, Kafka, and your cloud accounts.",
               direction: "right",
             },
             {
               number: "03",
-              title: "Cost Allocation & FinOps",
-              category: "Real-time cost attribution by team, project, or department with automated guardrails and anomaly detection.",
+              title: "Provisioning Systems",
+              category: "Self-service workspace creation for Databricks, Snowflake, and cloud environments with policy guardrails.",
               direction: "left",
             },
             {
               number: "04",
-              title: "Incident Dashboards",
-              category: "Kubernetes deployments, AWS Lambda failures, database issues—see the blast radius and remediate in minutes.",
+              title: "Incident Response Tools",
+              category: "On-call dashboards, runbook automation, and blast radius analysis for faster MTTR.",
               direction: "right",
             },
             {
               number: "05",
-              title: "Compliance & Audit Systems",
-              category: "SOC2, CIS benchmarks, security groups, IAM drift—prove compliance in real-time with signed audit trails.",
+              title: "Compliance & Audit Apps",
+              category: "Access reviews, policy compliance tracking, and audit trail systems that work across all your services.",
               direction: "left",
             },
             {
               number: "06",
-              title: "Observability Integrations",
-              category: "Datadog, Prometheus, CloudWatch—correlate logs, metrics, and traces across your entire infrastructure stack.",
+              title: "Operational Workflows",
+              category: "Backup monitoring, deployment approvals, environment promotion, and the other 50 internal tools you need.",
               direction: "right",
-            },
-            {
-              number: "07",
-              title: "Resource Governance",
-              category: "Track who accesses what. Auto-revoke when people leave. Detect credential drift and privilege creep.",
-              direction: "left",
             },
           ].map((project, i) => (
             <ProjectCard key={i} project={project} index={i} isVisible={isVisible} />

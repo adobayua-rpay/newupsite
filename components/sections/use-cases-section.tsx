@@ -5,88 +5,88 @@ import { useState } from "react"
 
 const useCases = [
   {
-    persona: "Security & Compliance",
+    persona: "Identity & Access",
     cases: [
       {
-        title: "The 2AM GuardDuty Alert",
-        problem: "Security alerts at 2AM, no context on what the IAM role does or what breaks if you revoke it.",
-        solution: "Instant graph view of role dependencies, blast radius analysis, and safe remediation—all in 4 minutes instead of 1+ hour.",
-        impact: "1 hour → 4 minutes incident response",
+        title: "JIT Access System for Production",
+        problem: "Engineers wait 3-4 weeks for access to production databases. Security reviews are manual and backlogged.",
+        solution: "Built a JIT access portal in 20 minutes. Engineers request access, managers approve in Slack, permissions auto-expire. Full audit trail.",
+        impact: "3 weeks → 15 minutes for access",
       },
       {
-        title: "The Public S3 Bucket Nightmare",
-        problem: "23 public S3 buckets found. Which ones should be public? Who owns them? What breaks if we fix it?",
-        solution: "Auto-classify buckets, show dependencies, make 17 private with policy updates—all in 8 minutes.",
-        impact: "3 weeks → 8 minutes compliance fix",
+        title: "Bulk User Provisioning",
+        problem: "Onboarding 50 new hires meant 2 weeks of manual setup across Okta, AWS, GitLab, and 12 other systems.",
+        solution: "Built a provisioning app that reads from HR CSV, creates accounts across all systems, applies role-based policies.",
+        impact: "2 weeks → 30 minutes per cohort",
       },
       {
-        title: "The SOC2 Audit From Hell",
-        problem: "40 hours per audit to manually prove encryption, logging, and MFA compliance with outdated Excel exports.",
-        solution: "Generate complete audit report with cryptographically signed evidence in 5 minutes.",
-        impact: "$10K saved per audit, continuous compliance",
+        title: "Identity Governance Dashboard",
+        problem: "Security asked who has access to what across 47 services. Answer: nobody knew.",
+        solution: "Built an access review app. Shows every user, every permission, every system. Quarterly reviews take 2 hours instead of 2 weeks.",
+        impact: "$80K saved per audit cycle",
       },
     ],
   },
   {
-    persona: "Platform Engineering & DevOps",
+    persona: "Data Infrastructure",
     cases: [
       {
-        title: "The Deployment That Took Down Prod",
-        problem: "Lambda memory change triggers obscure IAM policy condition, causing 15% error rate in production.",
-        solution: "Pre-deployment blast radius detects policy conflict, prevents incident before it happens.",
-        impact: "Zero downtime vs. 15 minutes of outage",
+        title: "Databricks Workspace Provisioning",
+        problem: "Data scientists needed workspaces. IT had a 6-step ticket process. Average wait: 4 days.",
+        solution: "Built a self-service portal. Users pick workspace config, cost center gets tagged, workspace created in 3 minutes with proper isolation.",
+        impact: "4 days → 3 minutes",
       },
       {
-        title: "The Accidental Resource Deletion",
-        problem: "Junior engineer runs 'terraform destroy' in prod by mistake. 2.5 hours to restore, partial data loss.",
-        solution: "6-minute RTO with component-aware restore including all configs, relationships, and data.",
-        impact: "6 minutes vs. 2.5 hours, zero data loss",
+        title: "Postgres Connection Manager",
+        problem: "47 microservices connecting to Postgres clusters. Credentials scattered. No visibility into who connects to what.",
+        solution: "Built a connection management dashboard. Rotate credentials, audit connections, revoke access—all in one place.",
+        impact: "Credential rotation: 2 days → 5 minutes",
       },
       {
-        title: "The Cascading Failure",
-        problem: "DynamoDB throttling cascades to 10 components. 45 minutes to trace dependencies and fix.",
-        solution: "Auto-correlate root cause, show full impact graph, remediate in 7 minutes—optionally while you sleep.",
-        impact: "7 minutes MTTR vs. 45 minutes",
+        title: "Kafka Topic Admin Portal",
+        problem: "Creating Kafka topics required understanding ACLs, partition strategy, and retention policies. Only 2 engineers could do it.",
+        solution: "Built a topic provisioning app with guardrails. Teams request topics, policies enforced automatically, ACLs configured correctly.",
+        impact: "2 engineers → entire platform team",
       },
     ],
   },
   {
-    persona: "FinOps & Cost Optimization",
+    persona: "Platform Operations",
     cases: [
       {
-        title: "The Mystery Cost Spike",
-        problem: "$35K cost spike. 4 hours to find someone changed a Lambda to 3008MB for 'testing' and forgot to revert.",
-        solution: "2-minute root cause with component-level cost attribution. Auto-revert and set up guardrails.",
-        impact: "$300K/year savings identified",
+        title: "Kubernetes Resource Viewer",
+        problem: "Developers couldn't see what was running in their namespace without kubectl access. Support tickets piled up.",
+        solution: "Built a namespace dashboard. Shows pods, deployments, resource usage, recent events. Developers self-serve, ops focuses on real issues.",
+        impact: "40% reduction in support tickets",
       },
       {
-        title: "The Tech Debt Mountain",
-        problem: "1,200 Lambdas—no idea which are used. Paying $5K/month for zombie resources.",
-        solution: "Identify 437 unused components, safe to delete, with backups. 10-minute cleanup.",
-        impact: "$49K/year recovered",
+        title: "Deployment Approval Workflow",
+        problem: "Production deploys required Slack threads, manual approvals, and prayer. Audit trail: nonexistent.",
+        solution: "Built a deployment portal. Teams submit, leads approve, deploys execute with rollback buttons. Full audit log.",
+        impact: "Zero untracked production changes",
       },
       {
-        title: "The Chargeback Nightmare",
-        problem: "20 hours/month to build cost allocation models. 60% of resources untagged, teams dispute allocations.",
-        solution: "Auto-infer ownership from graph, 98% accuracy. 5-minute monthly reports.",
-        impact: "20 hours → 5 minutes per month",
+        title: "Incident Response Dashboard",
+        problem: "On-call meant SSH-ing into boxes, checking logs in 5 different systems, and hoping you knew the runbooks.",
+        solution: "Built an incident dashboard. Aggregates metrics, surfaces runbooks, shows blast radius. MTTR dropped significantly.",
+        impact: "MTTR reduced by 60%",
       },
     ],
   },
   {
-    persona: "Executive & Leadership",
+    persona: "Compliance & Security",
     cases: [
       {
-        title: "The Board Question",
-        problem: "Board asks 'Are we SOC2 compliant?' CTO scrambles for 2 days to manually audit and find gaps.",
-        solution: "Real-time compliance dashboard shown live in board meeting with continuous monitoring proof.",
-        impact: "Board confidence, $120K audit savings",
+        title: "Access Review Automation",
+        problem: "Quarterly access reviews meant exporting data from 30 systems into spreadsheets. Always incomplete, always late.",
+        solution: "Built an access review app. Pulls from all systems, shows managers their team's access, captures approvals. Done in hours.",
+        impact: "3 weeks → 4 hours per quarter",
       },
       {
-        title: "The M&A Diligence Nightmare",
-        problem: "Buyer needs complete cloud inventory for due diligence. 3 weeks of engineering chaos, $200K+ cost.",
-        solution: "1-hour comprehensive report: inventory, costs, security, compliance, debt—buyer calls it 'most thorough ever.'",
-        impact: "3 weeks → 1 hour, faster deal close",
+        title: "Audit Trail System",
+        problem: "Auditors asked for 90 days of access logs. Answer: we don't have those centralized. Red flag.",
+        solution: "Built an audit log viewer. Aggregates events across AWS, Okta, GitHub, Jira. Searchable, exportable, always current.",
+        impact: "Compliance finding → compliance strength",
       },
     ],
   },
@@ -104,34 +104,31 @@ export function UseCasesSection() {
     >
       <div className="mx-auto w-full max-w-7xl">
         <div
-          className={`mb-8 transition-all duration-700 md:mb-12 ${
-            isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
-          }`}
+          className={`mb-8 transition-all duration-700 md:mb-12 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
+            }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Real Problems
+            Use Cases
           </h2>
           <p className="font-mono text-sm text-foreground/60 md:text-base">
-            / The infrastructure operations that drain budgets and sanity.
+            / Real-world scenarios that prove the value.
           </p>
         </div>
 
         {/* Persona Tabs */}
         <div
-          className={`mb-8 flex flex-wrap gap-2 transition-all duration-700 md:mb-10 md:gap-3 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-          }`}
+          className={`mb-8 flex flex-wrap gap-2 transition-all duration-700 md:mb-10 md:gap-3 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
           style={{ transitionDelay: "150ms" }}
         >
           {useCases.map((useCase, i) => (
             <button
               key={i}
               onClick={() => setSelectedPersona(i)}
-              className={`rounded-full border px-4 py-2 font-mono text-xs transition-all duration-300 md:px-5 md:py-2.5 md:text-sm ${
-                selectedPersona === i
+              className={`rounded-full border px-4 py-2 font-mono text-xs transition-all duration-300 md:px-5 md:py-2.5 md:text-sm ${selectedPersona === i
                   ? "border-foreground/40 bg-foreground/15 text-foreground backdrop-blur-md"
                   : "border-foreground/20 bg-foreground/5 text-foreground/60 hover:border-foreground/30 hover:text-foreground/80"
-              }`}
+                }`}
             >
               {useCase.persona}
             </button>
@@ -143,9 +140,8 @@ export function UseCasesSection() {
           {useCases[selectedPersona].cases.map((useCase, i) => (
             <div
               key={i}
-              className={`group border-l-2 border-foreground/20 pl-6 transition-all duration-700 md:pl-8 ${
-                isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
-              }`}
+              className={`group border-l-2 border-foreground/20 pl-6 transition-all duration-700 md:pl-8 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-12 opacity-0"
+                }`}
               style={{
                 transitionDelay: `${300 + i * 100}ms`,
               }}

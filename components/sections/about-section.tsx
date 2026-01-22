@@ -16,30 +16,31 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           {/* Left side - Story */}
           <div>
             <div
-              className={`mb-6 transition-all duration-700 md:mb-12 ${
-                isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
-              }`}
+              className={`mb-6 transition-all duration-700 md:mb-12 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
+                }`}
             >
               <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-                For Every Dollar
+                Infrastructure is
                 <br />
-                Spent On
+                the easy part.
                 <br />
-                <span className="text-foreground/40">Infrastructure.</span>
+                <span className="text-foreground/40">Operating it isn't.</span>
               </h2>
             </div>
 
             <div
-              className={`space-y-3 transition-all duration-700 md:space-y-4 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-              }`}
+              className={`space-y-3 transition-all duration-700 md:space-y-4 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+                }`}
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                You buy Databricks—then you need tooling so more than 2 engineers can provision workspaces. You self-host Postgres—then you need dashboards, access controls, backup monitoring. You run Kubernetes—then you need deployment portals, resource viewers, incident dashboards.
+                For every dollar spent on infrastructure, enterprises spend another dollar making it usable.
+                You buy Databricks—then need tooling so more than 2 engineers can provision workspaces.
+                You self-host Postgres—then need dashboards, access controls, backup monitoring.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Infrastructure is the easy part. Operating it is where the money goes. Panaptico takes away the painstaking process of architecting, deploying, and managing the internal systems that are critical for day-to-day operations.
+                Panaptico builds and hosts these internal tools for you. 50+ infrastructure integrations.
+                Enterprise auth included. 15 minutes from description to deployed application.
               </p>
             </div>
           </div>
@@ -47,9 +48,9 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           {/* Right side - Stats with creative layout */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
             {[
-              { value: "50+", label: "Infrastructure Systems", sublabel: "AWS, Azure, Databricks, Postgres, and more.", direction: "right" },
-              { value: "15min", label: "Time to Deploy", sublabel: "From description to production-ready.", direction: "left" },
-              { value: "$", label: "Per Tool", sublabel: "15 minutes setup. No multi-week security review.", direction: "right" },
+              { value: "50+", label: "Infrastructure Integrations", sublabel: "AWS, Databricks, Kafka, Okta, and more.", direction: "right" },
+              { value: "15min", label: "To Production", sublabel: "From description to deployed app.", direction: "left" },
+              { value: "Enterprise", label: "Auth & Observability", sublabel: "IAM, audit trails, monitoring included.", direction: "right" },
             ].map((stat, i) => {
               const getRevealClass = () => {
                 if (!isVisible) {
@@ -80,9 +81,8 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
         </div>
 
         <div
-          className={`mt-8 flex flex-wrap gap-3 transition-all duration-700 md:mt-16 md:gap-4 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
-          }`}
+          className={`mt-8 flex flex-wrap gap-3 transition-all duration-700 md:mt-16 md:gap-4 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+            }`}
           style={{ transitionDelay: "750ms" }}
         >
           <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
