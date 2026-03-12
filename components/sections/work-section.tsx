@@ -17,10 +17,10 @@ export function WorkSection() {
             }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            What You Can Build
+            The Implementation Gap
           </h2>
           <p className="font-mono text-sm text-foreground/60 md:text-base">
-            / Internal tools for every infrastructure system you run.
+            / You bought the platform. Here's what actually happens next.
           </p>
         </div>
 
@@ -28,38 +28,38 @@ export function WorkSection() {
           {[
             {
               number: "01",
-              title: "Access Management Portals",
-              category: "JIT access requests, bulk user provisioning, permission audits across Okta, AWS IAM, Azure AD, and more.",
+              title: "Next-Gen Firewall / Prisma Access",
+              category: "6 months later you're running in tap mode, not blocking anything, because 400 legacy rules nobody understands still need translating.",
               direction: "left",
             },
             {
               number: "02",
-              title: "Infrastructure Dashboards",
-              category: "Resource viewers, cost monitors, health checks for Postgres, Elasticsearch, Redis, Kafka, and your cloud accounts.",
+              title: "SailPoint Identity Security Cloud",
+              category: "18 months and $2M later, access reviews are still manual because automation never got configured for your actual HR workflows.",
               direction: "right",
             },
             {
               number: "03",
-              title: "Provisioning Systems",
-              category: "Self-service workspace creation for Databricks, Snowflake, and cloud environments with policy guardrails.",
+              title: "Databricks Lakehouse Platform",
+              category: "12 months later you're paying for Premium tier but running everything in one shared cluster because nobody implemented the governance layer.",
               direction: "left",
             },
             {
               number: "04",
-              title: "Incident Response Tools",
-              category: "On-call dashboards, runbook automation, and blast radius analysis for faster MTTR.",
+              title: "CrowdStrike Falcon Platform",
+              category: "Modules you're paying for were never enabled. Detection policies don't map to your environment. Nobody tracked feature activation after deployment.",
               direction: "right",
             },
             {
               number: "05",
-              title: "Compliance & Audit Apps",
-              category: "Access reviews, policy compliance tracking, and audit trail systems that work across all your services.",
+              title: "Okta Identity Cloud",
+              category: "Paying for Advanced Server Access for 200 users. 12 have configured it. Access certification workflows don't match how your teams actually work.",
               direction: "left",
             },
             {
               number: "06",
-              title: "Operational Workflows",
-              category: "Backup monitoring, deployment approvals, environment promotion, and the other 50 internal tools you need.",
+              title: "Every Other Platform",
+              category: "The result is always the same. Brutal, expensive, and business-devastating. Only 30% of implementation projects ever succeed.",
               direction: "right",
             },
           ].map((project, i) => (

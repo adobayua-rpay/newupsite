@@ -1,0 +1,18 @@
+name = "v0-shaders-landing-page"
+compatibility_date = "2024-12-30"
+compatibility_flags = ["nodejs_compat"]
+main = ".open-next/worker.js"
+workers_dev = true
+
+# Custom domains
+[[routes]]
+pattern = "panaptico.com/*"
+zone_name = "panaptico.com"
+
+[[routes]]
+pattern = "www.panaptico.com/*"
+zone_name = "panaptico.com"
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"

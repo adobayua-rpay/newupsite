@@ -13,18 +13,18 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
     >
       <div className="mx-auto w-full max-w-7xl">
         <div className="grid gap-8 md:grid-cols-2 md:gap-16 lg:gap-24">
-          {/* Left side - Story */}
+          {/* Left side - What Panaptico Solves */}
           <div>
             <div
               className={`mb-6 transition-all duration-700 md:mb-12 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"
                 }`}
             >
               <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-                Infrastructure is
+                Implementation
                 <br />
-                the easy part.
+                Operationalization.
                 <br />
-                <span className="text-foreground/40">Operating it isn't.</span>
+                <span className="text-foreground/40">Day 0 to Day 365.</span>
               </h2>
             </div>
 
@@ -34,23 +34,20 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                For every dollar spent on infrastructure, enterprises spend another dollar making it usable.
-                You buy Databricks—then need tooling so more than 2 engineers can provision workspaces.
-                You self-host Postgres—then need dashboards, access controls, backup monitoring.
+                What you bought. What you deployed. What your business needs. What vendors keep changing. Panaptico continuously reconciles all four.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Panaptico builds and hosts these internal tools for you. 50+ infrastructure integrations.
-                Enterprise auth included. 15 minutes from description to deployed application.
+                Not deploy once and pray — a living system that ensures your platforms are actually working as both your business and the products evolve.
               </p>
             </div>
           </div>
 
-          {/* Right side - Stats with creative layout */}
+          {/* Right side - Stats */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
             {[
-              { value: "50+", label: "Infrastructure Integrations", sublabel: "AWS, Databricks, Kafka, Okta, and more.", direction: "right" },
-              { value: "15min", label: "To Production", sublabel: "From description to deployed app.", direction: "left" },
-              { value: "Enterprise", label: "Auth & Observability", sublabel: "IAM, audit trails, monitoring included.", direction: "right" },
+              { value: "$6T+", label: "Global IT Spend", sublabel: "$1.1T software alone, 2-3x that on implementation.", direction: "right" },
+              { value: "70%", label: "Implementation Failure Rate", sublabel: "Consistent since the 1970s.", direction: "left" },
+              { value: "Day 0–365", label: "Continuous Loop", sublabel: "Not a project. A living system.", direction: "right" },
             ].map((stat, i) => {
               const getRevealClass = () => {
                 if (!isVisible) {
@@ -88,8 +85,8 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
             Book a Demo
           </MagneticButton>
-          <MagneticButton size="lg" variant="secondary" onClick={() => scrollToSection?.(1)}>
-            Explore Features
+          <MagneticButton size="lg" variant="secondary" onClick={() => window.open("https://alpha.panaptico.com/sign-in", "_blank")}>
+            Get Started
           </MagneticButton>
         </div>
       </div>
