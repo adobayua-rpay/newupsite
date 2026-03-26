@@ -20,11 +20,11 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
                 }`}
             >
               <h2 className="mb-3 font-sans text-3xl font-light leading-[1.1] tracking-tight text-foreground md:mb-4 md:text-6xl lg:text-7xl">
-                Implementation
+                The Implementation
                 <br />
-                Operationalization.
+                System of Record.
                 <br />
-                <span className="text-foreground/40">Day 0 to Day 365.</span>
+                <span className="text-foreground/40">From Day 0 to long after go-live.</span>
               </h2>
             </div>
 
@@ -34,10 +34,10 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
               style={{ transitionDelay: "200ms" }}
             >
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                What you bought. What you deployed. What your business needs. What vendors keep changing. Panaptico continuously reconciles all four.
+                What you bought. What you deployed. What your business needs. What vendors keep changing. Panaptico continuously reconciles all four — across system context, work context, and organizational context.
               </p>
               <p className="max-w-md text-sm leading-relaxed text-foreground/90 md:text-lg">
-                Not deploy once and pray — a living system that ensures your platforms are actually working as both your business and the products evolve.
+                Not a project with an end date — a living implementation system of record. Every discovery, decision, approval, artifact, and change retained as durable, audit-grade implementation memory.
               </p>
             </div>
           </div>
@@ -45,9 +45,9 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           {/* Right side - Stats */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
             {[
-              { value: "$6T+", label: "Global IT Spend", sublabel: "$1.1T software alone, 2-3x that on implementation.", direction: "right" },
-              { value: "70%", label: "Implementation Failure Rate", sublabel: "Consistent since the 1970s.", direction: "left" },
-              { value: "Day 0–365", label: "Continuous Loop", sublabel: "Not a project. A living system.", direction: "right" },
+              { value: "$1.1T", label: "Annual Software Spend", sublabel: "2–3x that on implementation alone. Only 29% of projects succeed.", direction: "right" },
+              { value: "71%", label: "Implementation Failure Rate", sublabel: "Over budget, incomplete, underperforming, or abandoned.", direction: "left" },
+              { value: "3 Layers", label: "Of Context", sublabel: "System. Work. Organizational. All maintained together.", direction: "right" },
             ].map((stat, i) => {
               const getRevealClass = () => {
                 if (!isVisible) {
@@ -82,7 +82,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
             }`}
           style={{ transitionDelay: "750ms" }}
         >
-          <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(4)}>
+          <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(7)}>
             Book a Demo
           </MagneticButton>
           <MagneticButton size="lg" variant="secondary" onClick={() => window.open("https://alpha.panaptico.com/sign-in", "_blank")}>

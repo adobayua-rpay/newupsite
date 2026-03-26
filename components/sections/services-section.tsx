@@ -17,33 +17,33 @@ export function ServicesSection() {
           }`}
         >
           <h2 className="mb-2 font-sans text-5xl font-light tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Capabilities
+            How It Works
           </h2>
           <p className="font-mono text-sm text-foreground/60 md:text-base">
-            / The foundation of our intelligence layer.
+            / Intent → Discovery → Graph → Execution → System of Record.
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:gap-x-24">
           {[
             {
-              title: "Component Graph Engine",
-              description: "The living map of every component, dependency, and relationship in real-time.",
+              title: "Live Discovery",
+              description: "Connects to your systems in read-only mode. Discovers what actually exists — confirmed facts, inferred assumptions, and flagged gaps — not what was assumed in a kickoff meeting.",
               direction: "top",
             },
             {
-              title: "Multi-Cloud Normalization",
-              description: "One unified model for assets across AWS, Azure, and GCP.",
+              title: "Implementation Graph",
+              description: "A continuously maintained model of the implementation itself: systems, dependencies, tasks, owners, approvals, evidence, risks, and health — all synchronized.",
               direction: "right",
             },
             {
-              title: "Zero-Trust Engine",
-              description: "Just-in-time permissions and an immutable audit trail for every action.",
+              title: "Governed Execution",
+              description: "Tasks are governed work objects with exit criteria, evidence requirements, named owners, approvers, and audit trails. Completion is proven, not asserted.",
               direction: "left",
             },
             {
-              title: "State Reconciliation",
-              description: "Continuously syncing Git, runtime, and the graph into a single source of truth.",
+              title: "Post-Go-Live Continuity",
+              description: "The blueprint doesn't get filed away. It becomes the living baseline for validation, drift detection, adoption tracking, and operational intelligence.",
               direction: "bottom",
             },
           ].map((service, i) => (

@@ -5,62 +5,62 @@ import { useState } from "react"
 
 const problemAreas = [
   {
-    persona: "Day 0",
+    persona: "System Context",
     cases: [
       {
-        title: "Software doesn't implement itself",
-        description: "$1.1T spent on enterprise software annually. 2–3x that on making it work. Only 30% of implementations succeed.",
-        impact: "70% failure rate",
-      },
-      {
-        title: "Consultants aren't the answer",
-        description: "$300/hr consultants produce documents that decay immediately. They're incentivized to never fully solve the problem.",
-        impact: "$1.3T/yr on IT services",
-      },
-      {
-        title: "Speed to value is everything",
-        description: "How fast you operationalize from Day 0 determines your entire business outcome. Most orgs spend months just on the implementation layer.",
-        impact: "Months of lost productivity",
-      },
-    ],
-  },
-  {
-    persona: "Day 420",
-    cases: [
-      {
-        title: "You hire 50 people",
-        description: "Wrong license tier. Over-provisioned seats. Under-provisioned access stalls engineering for weeks. Nobody tracks utilization against enablement.",
-        impact: "$40K+ burned per event",
+        title: "Live state is never discovered",
+        description: "Organizations deploy against assumptions from kickoff meetings, not actual environment state. Missing dependencies, disabled services, and config mismatches surface late — or never.",
+        impact: "Preventable surprises",
       },
       {
         title: "Vendors ship breaking changes",
-        description: "Databricks launches Lakebase but it has a fundamentally different security model than Unity Catalog. How do you identify and reconcile this?",
+        description: "Databricks launches Lakebase with a fundamentally different security model than Unity Catalog. Okta deprecates a workflow. How do you identify and reconcile the impact?",
         impact: "Invisible config drift",
       },
       {
-        title: "Knowledge walks out the door",
-        description: "The engineer who set up your Okta leaves. The Splunk admin retires. Implementation context lives in heads, not systems.",
-        impact: "Teams start from scratch",
+        title: "No baseline, no drift detection",
+        description: "After go-live, systems change. Configs drift. Logging gaps sit undetected. Nobody can tell whether what was built still matches what was approved.",
+        impact: "Silent degradation",
       },
     ],
   },
   {
-    persona: "The Real Problem",
+    persona: "Work Context",
     cases: [
+      {
+        title: "Static plans decay immediately",
+        description: "$300/hr consultants produce documents that are stale before ink dries. Tickets, decks, and wiki pages can't maintain implementation state across systems, teams, and time.",
+        impact: "$1.3T/yr on IT services",
+      },
+      {
+        title: "No governed execution",
+        description: "Tasks have no exit criteria, no evidence requirements, no approval chains. Completion is asserted, never proven. There is no audit trail for what was actually done.",
+        impact: "Zero accountability",
+      },
       {
         title: "No system of record exists",
         description: "ServiceNow tracks workflows. Jira tracks tickets. Vanta tracks compliance. Nothing tracks whether your technology is actually implemented correctly.",
         impact: "Zero visibility",
       },
+    ],
+  },
+  {
+    persona: "Organizational Context",
+    cases: [
       {
-        title: "55% of software goes unused",
-        description: "The capabilities your org believes it has often don't exist. $127.3M in wasted spend per large enterprise, every year.",
-        impact: "$127.3M/yr wasted",
+        title: "Ownership is always ambiguous",
+        description: "Three executives have three definitions of success. The security team, data team, and business owner all assume somebody else owns the rollout. Nobody realizes until month four.",
+        impact: "Nobody's accountable",
       },
       {
-        title: "It's not a project—it's a loop",
-        description: "What you bought. What you deployed. What your business needs. What vendors keep changing. These four things never stay aligned.",
-        impact: "Debt compounds daily",
+        title: "Knowledge walks out the door",
+        description: "The engineer who set up your Okta leaves. The Splunk admin retires. Implementation context lives in heads, not systems. Teams rebuild understanding from scratch.",
+        impact: "Teams start from scratch",
+      },
+      {
+        title: "Adoption is assumed, not measured",
+        description: "Training happens as a webinar and a deck. Three weeks later half the org still operates the old way. Nobody tracks whether the new operating model took hold.",
+        impact: "71% underperform",
       },
     ],
   },
@@ -85,7 +85,7 @@ export function UseCasesSection() {
             Why It Fails
           </h2>
           <p className="font-mono text-sm text-foreground/60 md:text-base">
-            / Implementation isn't a project. It's a continuous problem.
+            / Implementation fails across three layers — and nothing in your stack catches it.
           </p>
         </div>
 

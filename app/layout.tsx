@@ -2,14 +2,15 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import IntercomProvider from "@/components/intercom-provider"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Panaptico - The Engine for Cloud Components",
-  description: "The real-time intelligence layer for your entire cloud infrastructure—one normalized graph, one API, one interface across AWS, Azure, and GCP",
+  title: "Panaptico — The Implementation Control Plane for Enterprise Systems",
+  description: "The implementation control plane and system of record for enterprise IT. From evaluation to rollout to operationalization — one living system across your entire stack.",
 }
 
 export default function RootLayout({
@@ -32,6 +33,7 @@ document.head.appendChild(o)}initApollo();`,
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
+        <IntercomProvider />
       </body>
     </html>
   )

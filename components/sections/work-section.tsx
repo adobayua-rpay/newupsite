@@ -59,7 +59,7 @@ export function WorkSection() {
             {
               number: "06",
               title: "Every Other Platform",
-              category: "The result is always the same. Brutal, expensive, and business-devastating. Only 30% of implementation projects ever succeed.",
+              category: "The result is always the same. Brutal, expensive, and business-devastating. Only 29% of implementation projects are considered successful.",
               direction: "right",
             },
           ].map((project, i) => (
