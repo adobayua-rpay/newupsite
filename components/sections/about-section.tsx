@@ -45,7 +45,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           {/* Right side - Stats */}
           <div className="flex flex-col justify-center space-y-6 md:space-y-12">
             {[
-              { value: "$1.1T", label: "Annual Software Spend", sublabel: "2–3x that on implementation alone. Only 29% of projects succeed.", direction: "right" },
+              { value: "$1.1T", label: "Annual IT Software Spend", sublabel: "2–3x that on implementation alone. Only 29% of projects succeed.", direction: "right" },
               { value: "71%", label: "Implementation Failure Rate", sublabel: "Over budget, incomplete, underperforming, or abandoned.", direction: "left" },
               { value: "3 Layers", label: "Of Context", sublabel: "System. Work. Organizational. All maintained together.", direction: "right" },
             ].map((stat, i) => {
@@ -85,7 +85,7 @@ export function AboutSection({ scrollToSection }: { scrollToSection?: (index: nu
           <MagneticButton size="lg" variant="primary" onClick={() => scrollToSection?.(7)}>
             Book a Demo
           </MagneticButton>
-          <MagneticButton size="lg" variant="secondary" onClick={() => window.open("https://alpha.panaptico.com/sign-in", "_blank")}>
+          <MagneticButton size="lg" variant="secondary" onClick={() => window.open("https://alpha.panaptico.com", "_blank")}>
             Get Started
           </MagneticButton>
         </div>

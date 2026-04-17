@@ -1,4 +1,13 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Privacy Policy — Panaptico",
+  description:
+    "How Panaptico collects, uses, and protects your personal information. Read our privacy policy for details on data handling, security, and your rights.",
+  alternates: { canonical: "/privacy" },
+  robots: { index: true, follow: true },
+}
 
 export default function PrivacyPolicy() {
   return (

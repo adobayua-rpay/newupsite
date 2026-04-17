@@ -76,7 +76,7 @@
 
 @theme inline {
   /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
-  --font-sans: "Geist", "Geist Fallback";
+  --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -119,6 +119,8 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+  [data-custom-cursor] * {
     cursor: none;
   }
   body {
@@ -143,4 +145,29 @@
     transform: translateZ(0);
     backface-visibility: hidden;
   }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: 100%; }
 }

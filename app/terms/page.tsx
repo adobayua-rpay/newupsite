@@ -1,4 +1,13 @@
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Terms of Use — Panaptico",
+  description:
+    "Terms and conditions for using the Panaptico platform and website. Read our terms of use before accessing our services.",
+  alternates: { canonical: "/terms" },
+  robots: { index: true, follow: true },
+}
 
 export default function TermsOfUse() {
   return (
